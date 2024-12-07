@@ -1,0 +1,14 @@
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\bin\Debug\net8.0\ProjetoJogo.exe
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\bin\Debug\net8.0\ProjetoJogo.deps.json
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\bin\Debug\net8.0\ProjetoJogo.runtimeconfig.json
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\bin\Debug\net8.0\ProjetoJogo.dll
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\bin\Debug\net8.0\ProjetoJogo.pdb
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.AssemblyInfoInputs.cache
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.AssemblyInfo.cs
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.csproj.CoreCompileInputs.cache
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.dll
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\refint\ProjetoJogo.dll
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.pdb
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ProjetoJogo.genruntimeconfig.cache
+C:\Users\ferna\OneDrive\Desktop\jogo\ProjetoJogo\obj\Debug\net8.0\ref\ProjetoJogo.dll
