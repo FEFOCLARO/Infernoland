@@ -13,10 +13,10 @@ namespace InfernoGame
             Console.Clear();
 
             // Diálogo com o boss final
-            Console.WriteLine($"\"Aqui quem fala é boss final, estou no último círculo deste inferno te esperando, {player.Name}.\"");
-            Console.WriteLine($"\"Para meu divertimento, lhe darei este {player.Weapon} para você tentar a sorte contra meus escravos.\"");
+            Console.WriteLine($"\"Aqui quem fala é o boss final, estou no último círculo deste inferno te esperando, {player.Name}.\"");
+            Console.WriteLine($"\"Para meu próprio divertimento, lhe darei este {player.Weapon} para você tentar a sorte contra meus escravos.\"");
             Console.WriteLine("\"ዲያብሎስ ክበልዓካ እዩ።\"");
-            Console.WriteLine($"Você recebeu: {player.Weapon} (Dano: {player.WeaponDamage}).");
+            Console.WriteLine($"Você recebeu:{player.Weapon} (Dano:{player.WeaponDamage}).");
             Console.WriteLine("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
 
@@ -78,38 +78,46 @@ namespace InfernoGame
         }
 
         static void StartFirstLevel(PlayerStats player)
+{
+    Console.Clear();
+    Console.WriteLine("=======================================");
+    Console.WriteLine("             NÍVEL 1: LIMBOLIC         ");
+    Console.WriteLine("=======================================");
+
+    // Lista de inimigos para o nível 1
+    Enemy[] enemies = { new ShadowMinion(), new CãoAmaldiçoado(), new Utszú() };
+
+    foreach (Enemy enemy in enemies)
+    {
+        Console.WriteLine($"\nUm {enemy.Name} aparece!");
+        Combat(player, enemy);
+
+        if (player.HP <= 0)
         {
-            Console.Clear();
-            Console.WriteLine("=======================================");
-            Console.WriteLine("             NÍVEL 1: LIMBOLIC         ");
-            Console.WriteLine("=======================================");
-            Console.WriteLine("Você entrou no primeiro círculo do inferno...");
-            Console.WriteLine("Um monstro aparece à sua frente!");
-            Console.WriteLine("Pressione qualquer tecla para continuar...");
-            Console.ReadKey();
-
-            // Criar o primeiro inimigo
-            Enemy firstEnemy = new ShadowMinion();  // Instancia uma subclasse de Enemy
-
-            // Iniciar o combate por turnos
-            Combat(player, firstEnemy);
-
+            Console.WriteLine("Você foi derrotado... Fim de jogo.");
+            return;
         }
+    }
 
-        static void Combat(PlayerStats player, Enemy enemy)
-        {
-            Console.Clear();
-            Console.WriteLine($"Você está enfrentando {enemy.Name} (HP: {enemy.HP}, Dano: {enemy.Damage})!");
+    Console.WriteLine("\nParabéns! Você sobreviveu ao nível 1!");
+    Console.WriteLine("Pressione qualquer tecla para continuar...");
+    Console.ReadKey();
+}
 
-            while (player.HP > 0 && enemy.HP > 0)
-            {
-              Console.WriteLine("\n=======================================");
-              Console.WriteLine($"Seu HP: {player.HP} | HP do {enemy.Name}: {enemy.HP}");
-              Console.WriteLine("=======================================");
+static void Combat(PlayerStats player, Enemy enemy)
+{
+    Console.Clear();
+    Console.WriteLine($"Você está enfrentando {enemy.Name} (HP: {enemy.HP}, Dano: {enemy.Damage})!");
+
+    while (player.HP > 0 && enemy.HP > 0)
+    {
+        Console.WriteLine("\n=======================================");
+        Console.WriteLine($"Seu HP: {player.HP} | HP do {enemy.Name}: {enemy.HP}");
+        Console.WriteLine("=======================================");
 
         // Turno do jogador
         Console.WriteLine("Escolha sua ação:");
-        Console.WriteLine("1. Atacar (10 de Dano) (80% de chance de acerto) (15% acerto crítico)");
+        Console.WriteLine("1. Atacar (10 Dano) (80% chance) (15% crit)");
         Console.WriteLine("2. Defender (Reduz dano sofrido pela metade)");
         Console.WriteLine("3. Tomar Poção (Restaura 50 HP)");
         Console.Write("Digite sua escolha: ");
@@ -117,25 +125,22 @@ namespace InfernoGame
 
         if (choice == "1")
         {
-                ExecutePlayerAttack(player, enemy);
+            ExecutePlayerAttack(player, enemy);
 
-    // Verifica se o inimigo foi derrotado após o ataque do jogador
-             if (enemy.HP <= 0)
-                 {
-        Console.WriteLine($"\nVocê derrotou {enemy.Name}!");
-
-        // Verifica se o inimigo deixou um item
-        string drop = enemy.GetDrop();  
-        if (drop != "Nada")
-        {
-            player.AddItem(drop);  // Adiciona o item ao inventário
+            if (enemy.HP <= 0)
+            {
+                Console.WriteLine($"\nVocê derrotou {enemy.Name}!");
+                string drop = enemy.GetDrop();
+                if (drop != "Nada")
+                {
+                    player.AddItem(drop);
+                }
+                break;
+            }
         }
-        break;  // Sai do loop de combate
-    }
-}
         else if (choice == "2")
         {
-            Console.WriteLine($"\nVocê assume uma postura defensiva.");
+            Console.WriteLine("\nVocê assume uma postura defensiva.");
             player.IsDefending = true;
         }
         else if (choice == "3")
@@ -156,17 +161,16 @@ namespace InfernoGame
             Console.WriteLine("\nOpção inválida. Você perdeu seu turno.");
         }
 
-        // Turno do inimigo (se ainda estiver vivo)
+        // Turno do inimigo
         if (enemy.HP > 0)
         {
             enemy.Attack(player);
 
-            // Verifica se o jogador foi derrotado após o ataque do inimigo
             if (player.HP <= 0)
             {
                 Console.WriteLine("\nVocê foi derrotado...");
                 Console.WriteLine("Game Over!");
-                return;  // Sai do método Combat
+                return;
             }
         }
     }

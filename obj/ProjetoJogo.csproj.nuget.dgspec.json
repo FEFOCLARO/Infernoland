@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ferna\\OneDrive\\Desktop\\jogo\\ProjetoJogo\\ProjetoJogo.csproj": {}
+    "C:\\Users\\ferna\\OneDrive\\Documentos\\Fernando-DEV\\Projetos do Fefo\\Projeto INFERNOLAND\\ProjetoJogo\\ProjetoJogo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ferna\\OneDrive\\Desktop\\jogo\\ProjetoJogo\\ProjetoJogo.csproj": {
+    "C:\\Users\\ferna\\OneDrive\\Documentos\\Fernando-DEV\\Projetos do Fefo\\Projeto INFERNOLAND\\ProjetoJogo\\ProjetoJogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ferna\\OneDrive\\Desktop\\jogo\\ProjetoJogo\\ProjetoJogo.csproj",
+        "projectUniqueName": "C:\\Users\\ferna\\OneDrive\\Documentos\\Fernando-DEV\\Projetos do Fefo\\Projeto INFERNOLAND\\ProjetoJogo\\ProjetoJogo.csproj",
         "projectName": "ProjetoJogo",
-        "projectPath": "C:\\Users\\ferna\\OneDrive\\Desktop\\jogo\\ProjetoJogo\\ProjetoJogo.csproj",
+        "projectPath": "C:\\Users\\ferna\\OneDrive\\Documentos\\Fernando-DEV\\Projetos do Fefo\\Projeto INFERNOLAND\\ProjetoJogo\\ProjetoJogo.csproj",
         "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ferna\\OneDrive\\Desktop\\jogo\\ProjetoJogo\\obj\\",
+        "outputPath": "C:\\Users\\ferna\\OneDrive\\Documentos\\Fernando-DEV\\Projetos do Fefo\\Projeto INFERNOLAND\\ProjetoJogo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
